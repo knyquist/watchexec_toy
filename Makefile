@@ -2,14 +2,16 @@ SHELL=/bin/bash
 
 .DEFAULT_GOAL := compile
 
-dylib_path = DYLD_LIBRARY_PATH=`cat lib.txt`:$$DYLD_LIBRARY_PATH
+include_path = `cat include.txt`
+lib_path = `cat lib.txt`
 
 watch:
 	watchexec --exts cpp make run
 
 compile:
-	$(dylib_path); \
-	clang++ --stdlib=libc++ --std=c++11 -I`cat include.txt` -L`cat lib.txt` program.cpp -ldocopt -o program
+	clang++ --stdlib=libc++ --std=c++11 -I$(include_path) -L$(lib_path) program.cpp \
+	$(lib_path)/libdocopt.a \
+	-o program
 
 run: compile
-	$(dylib_path) ./program --help
+	./program --help
