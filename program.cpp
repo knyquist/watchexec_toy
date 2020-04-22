@@ -1,0 +1,74 @@
+#include <iostream>
+#include <pbbam/Accuracy.h>
+#include <pbbam/AlignmentPrinter.h>
+#include <pbbam/DataSetTypes.h>
+#include <pbbam/BaiIndexedBamReader.h>
+#include <pbbam/BamHeader.h>
+#include <pbbam/BamFile.h>
+#include <pbbam/BamReader.h>
+#include <pbbam/BamRecord.h>
+#include <pbbam/BamRecordBuilder.h>
+#include <pbbam/BamRecordImpl.h>
+#include <pbbam/BamRecord.h>
+#include <pbbam/BamTagCodec.h>
+#include <pbbam/BamWriter.h>
+//#include <pbbam/PbiLookupData.h>
+//#include <pbbam/BarcodeQuery.h>
+#include <pbbam/DataSetTypes.h>
+//#include <pbbam/PbiLookupData.h>
+#include <pbbam/Cigar.h>
+#include <pbbam/CigarOperation.h>
+#include <pbbam/Compare.h>
+#include <pbbam/Config.h>
+#include <pbbam/EntireFileQuery.h>
+#include <pbbam/Frames.h>
+#include <pbbam/GenomicInterval.h>
+//#include <pbbam/CompositeBamReader.h> errors look related to PbiLookupData.h and BarcodeQuery.h
+#include <pbbam/GenomicIntervalQuery.h>
+#include <pbbam/DataSetTypes.h>
+#include <pbbam/PbiBasicTypes.h>
+#include <pbbam/IndexedFastaReader.h>
+#include <pbbam/Interval.h>
+#include <pbbam/exception/InvalidSequencingChemistryException.h>
+#include <pbbam/LocalContextFlags.h>
+//#include <pbbam/PbiLookupData.h>
+#include <pbbam/DataSetXsd.h>
+#include <pbbam/Orientation.h>
+#include <pbbam/PbiBuilder.h>
+#include <pbbam/PbiFile.h>
+//#include <pbbam/PbiFilter.h>
+//#include <pbbam/CompositeBamReader.h>
+//#include <pbbam/PbiFilterQuery.h>
+//#include <pbbam/PbiFilterTypes.h>
+//#include <pbbam/PbiIndex.h>
+//#include <pbbam/PbiIndexedBamReader.h>
+#include <pbbam/PbiRawData.h>
+#include <pbbam/Position.h>
+#include <pbbam/ProgramInfo.h>
+//#include <pbbam/QNameQuery.h>
+#include <pbbam/QualityValue.h>
+#include <pbbam/QualityValues.h>
+//#include <pbbam/ReadAccuracyQuery.h>
+#include <pbbam/ReadGroupInfo.h>
+//#include <pbbam/PbiLookupData.h>
+#include <pbbam/SamTagCodec.h>
+#include <pbbam/SequenceInfo.h>
+//#include <pbbam/CompositeBamReader.h>
+#include <pbbam/Strand.h>
+//#include <pbbam/SubreadLengthQuery.h>
+#include <pbbam/Tag.h>
+#include <pbbam/TagCollection.h>
+#include <pbbam/virtual/VirtualPolymeraseBamRecord.h>
+#include <pbbam/virtual/VirtualPolymeraseCompositeReader.h>
+#include <pbbam/virtual/VirtualPolymeraseReader.h>
+#include <pbbam/virtual/VirtualRegion.h>
+#include <pbbam/virtual/VirtualRegionType.h>
+#include <pbbam/virtual/VirtualRegionTypeMap.h>
+//#include <pbbam/ZmwGroupQuery.h>
+#include <pbbam/ZmwQuery.h>
+#include <pbbam/virtual/ZmwWhitelistVirtualReader.h>
+
+
+int main() {
+    std::cout << "Hello, world!" << std::endl;
+}
