@@ -1,5 +1,4 @@
 #include "docopt/docopt.h"
-#include "pbbam/Accuracy.h"
 
 static const char USAGE[] =
 R"(Program.
@@ -15,7 +14,8 @@ R"(Program.
 )";
 
 #include <iostream>
-
+#include <string>
+#include "src/functions.h"
 
 int main(int argc, const char** argv) {
     std::map<std::string, docopt::value> args
@@ -26,6 +26,12 @@ int main(int argc, const char** argv) {
      for(auto const& arg : args) {
          std::cout << arg.first << " => " << arg.second << std::endl;
      }
+
+     std::cout << "a is of type: " << typeid(args["--flag"].asString()).name() << std::endl;
+     std::string s = "10";
+     int val = std::stoi(args["--flag"].asString());
+     int sum = f::add(val, val);
+     std::cout << sum << std::endl;
 //    std::cout << "--flag => " << args["--flag"] << std::endl;
 //    std::cout << "<pos_arg> => " << args["<pos_arg>"] << std::endl;
 
